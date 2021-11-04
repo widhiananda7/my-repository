@@ -1,0 +1,50 @@
+!!!----------ATURAN LEVEL 1-10 DAN HAK AKSESNYA!----------!!!
+
+#ADMINISTRATOR (akun official)
+---HAK AKSES---
+	1.Kontrol penuh seluruh hak akses website
+	2.Hak khusus Administrator
+	#Lencana "Administrator Lv.10"
+
+
+#DEVELOPER (akun official > personal)
+---HAK AKSES---
+	1.Mengajukan saran, melakukan editing, update, hapus, blokir, 
+		setelah mendapat izin ADMINISTRATOR
+	2.Hak Khusus Dev
+	#Lencana "Developer Lv.6"
+
+
+#SUPER ADMIN (akun personal > Official)
+---HAK AKSES---
+	1.Akses menu Admin dengan SuperAdmin
+	2.Akses Khusus SuperAdmin
+	3.Etc..
+	#Lencana "SuperAdmin Lv.5"
+
+#SUPER USER (akun personal)
+---HAK AKSES---
+	1.Akses menu User dengan SuperUser
+	2.Akses berbayar SuperUser
+	3.Etc...
+
+#ADMIN (akun personal)
+---HAK AKSES---
+	1.Akses menu admin(terbatas)
+	2.Akses default Admin normal
+	3.Memantau kinerja website ,dan melaporkannya ke DEVELOPER
+	4.Mengatur lalu lintas dan melayani pertanyaan User dan Guest di website
+	5.Etc...
+
+#USER (akun personal)
+---HAK AKSES---
+        1.Akses menu User
+	2.Akses default User normal
+	3.Etc...
+--------MEMBERSHIP---------
+		1.More Benefits Reward
+
+#GUEST (akun tamu,dengan pengawasan ADMIN)
+---HAK AKSES---
+	1.Melihat tampilan umum website
+	2.Melihat status level dan profile pengguna lain
