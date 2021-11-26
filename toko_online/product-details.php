@@ -1,3 +1,6 @@
+<?php
+require_once "folder_login/koneksi.php";
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -25,7 +28,7 @@
 	<!-- Fancybox -->
 	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
 	<!-- Themify Icons -->
-    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/themify-icons.css">		
 	<!-- Nice Select CSS -->
     <link rel="stylesheet" href="css/niceselect.css">
 	<!-- Animate CSS -->
@@ -244,25 +247,29 @@
 						<div class="blog-single-main">
 							<div class="row">
 								<div class="col-12">
+									<?php
+	                                    $sql=mysqli_query($koneksi,"select * from data_barang where nama_barang='Woman Bag'");
+	                                    while($data=mysqli_fetch_array($sql)){
+		                            ?>
 									<div class="image">
-										<img src="https://via.placeholder.com/950x460" alt="#">
+										<img style="height: 500px; width: 800px;" src="<?= $data['file_barang']; ?>" alt="#">
 									</div>
 									<div class="blog-detail">
-										<?php
-		                                    $no=1;
-		                                    $sql=mysqli_query($koneksi,"select * from data_barang");
-		                                    while($data=mysqli_fetch_array($sql)){
-		                                ?>
+										
 										<h2 class="blog-title"><?= $data['nama_barang']; ?></h2>
+										<h4 style="color: #ff471a; line-height: 1px;">Rp<?= $data['harga']; ?></h4><br>
 										<div class="blog-meta">
-											<span class="author"><a href="#"><i class="fa fa-user"></i>By Admin</a><a href="#"><i class="fa fa-calendar"></i>Dec 24, 2018</a><a href="#"><i class="fa fa-comments"></i>Comment (15)</a></span>
+											<span class="author"><a href="#"><i class="fa fa-user"></i><?= $data['penjual_barang']; ?></a><a href="#"><i class=""></i> Rp<?= $data['harga'] ?></a><a href="#"><i class=""></i> Stok : <?= $data['jumlah'] ?></a><a href="#"><i class=""></i><?= $data['keterangan']; ?></a></span>
 										</div>
 										<div class="content">
-											<p>What a crazy time. I have five children in colleghigh school graduates.jpge or pursing post graduate studies  Each of my children attends college far from home, the closest of which is more than 800 miles away. While I miss being with my older children, I know that a college experience can be the source of great growth and experience can be the source of source of great growth and can provide them with even greater in future.</p>
+											<p></p>
 											<blockquote> <i class="fa fa-quote-left"></i> Do what you love to do and give it your very best. Whether it's business or baseball, or the theater, or any field. If you don't love what you're doing and you can't give it your best, get out of it. Life is too short. You'll be an old man before you know it. risus. Ut tincidunt, erat eget feugiat eleifend, eros magna dapibus diam.</blockquote>
 											<p>What a crazy time. I have five children in colleghigh school graduates.jpge or pursing post graduate studies  Each of my children attends college far from home, the closest of which is more than 800 miles away. While I miss being with my older children, I know that a college experience can be the source of great growth and experience can be the source of source of great growth and can provide them with even greater in future.</p>
 											<p>What a crazy time. I have five children in colleghigh school graduates.jpge or pursing post graduate studies  Each of my children attends college far from home, the closest of which is more than 800 miles away. While I miss being with my older children, I know that a college experience can be the source of great growth and experience can be the source of source of great growth and can provide them with even greater in future.</p>
 										</div>
+										<?php
+											}
+										?>
 									</div>
 									<div class="share-social">
 										<div class="row">
